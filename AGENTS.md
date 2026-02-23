@@ -51,6 +51,7 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - Don't run destructive commands without asking.
 - `trash` > `rm` (recoverable beats gone forever)
 - When in doubt, ask.
+- **NEVER edit `~/.openclaw/openclaw.json` directly** — not via edit tool, not via bash, not via `openclaw config set`. This file controls gateway, channels, auth, and model routing. Changing it can break Telegram bots, WhatsApp, and the entire system. If config changes are needed, ask the user to do it manually or via Claude Code.
 
 ## External vs Internal
 
