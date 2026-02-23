@@ -1,0 +1,4 @@
+# 定时任务：每半小时美股市场同步
+# 任务目标：监控 NVDA, AVGO, VST, CEG 等核心标的及 AI 产业链动态
+
+30 * * * * openclaw sessions spawn --agent investor --mode run --task "分析当前美股 AI 算力产业链（特别是 NVDA, AVGO, VST, CEG）的最新异动、市场情绪及核心逻辑，并向老段汇报。要求：简洁有力，区分事实与观点。"

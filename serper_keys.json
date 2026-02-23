@@ -1,0 +1,9 @@
+{
+  "keys": [
+    {"key": "171e32642fb9009fa195d172339345f414dce12e", "status": "no_credits"},
+    {"key": "98024bc09c2120774221b0625a898aa4abd4e71f", "status": "no_credits"},
+    {"key": "2a5caa37b2d9c04c05fa778e7596fa000d88ba68", "status": "active"},
+    {"key": "7484cfb6b9c7e41ffa379dcb5e895184203987f6", "status": "active"}
+  ],
+  "note": "Serper Google Search API keys. Use active keys for web search via curl."
+}
