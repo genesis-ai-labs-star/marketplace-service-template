@@ -46,8 +46,13 @@
 ## 消息发送与执行纪律
 
 - 当前通道直接回复文字即可，不需要 message 工具
-- message 工具仅用于发送文件（带 path 参数）到当前通道
-- 跨通道发送时需指定 channel 和 to 参数（如 channel="whatsapp", to="+1xxxxx"）
+- message 工具仅用于：发送文件、跨通道发送
+- **跨通道发送**（必须带齐全部参数）：
+  ```
+  message channel="whatsapp" to="+16138622927" message="要发送的文字内容"
+  ```
+  - `message` 参数（文字内容）是**必填项**，不能为空
+  - `channel` 必须指定目标通道，`to` 必须是手机号(WhatsApp)或chatId(Telegram:8534135698)
 - gen.py 执行完会打印 `SEND_FILES:` 及完整路径，直接复制该路径用 message 发送
 - 如果没有 SEND_FILES 输出，必须 `exec ls <目录>` 获取真实文件名，禁止猜测路径
 - 严禁编造文件路径。只用 exec 输出或 ls 返回的路径
