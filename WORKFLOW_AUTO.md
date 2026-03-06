@@ -1,0 +1,1 @@
+../shared-governance/WORKFLOW_AUTO.md

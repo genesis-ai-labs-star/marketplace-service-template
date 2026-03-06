@@ -1,0 +1,10 @@
+../agents/
+../credentials/
+*.jsonl
+sessions/
+node_modules/
+*.png
+*.jpg
+*.jpeg
+*.webp
+.DS_Store

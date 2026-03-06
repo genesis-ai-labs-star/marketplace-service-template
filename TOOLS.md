@@ -1,56 +1,32 @@
-# TOOLS.md - Local Notes
+# TOOLS.md - Investor Agent
 
-Skills define _how_ tools work. This file is for _your_ specifics — the stuff that's unique to your setup.
-
-## What Goes Here
-
-Things like:
-
-- Camera names and locations
-- SSH hosts and aliases
-- Preferred voices for TTS
-- Speaker/room names
-- Device nicknames
-- Anything environment-specific
+**Use tools directly. Never say "I can't" when a tool exists for it.**
 
 ## Search API
 
-### Tavily（主力搜索 - AI优化，返回完整内容）⭐推荐
+### Tavily (主力搜索 - AI优化，返回完整内容)
 - 脚本: `/Users/genesis/.openclaw/workspace-investor/tavily_search.sh "query" [max] [basic|advanced]`
-- Keys（3个全部有效）:
-  - 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
-  - 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
-  - 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
+- API Keys: 见 `/Users/genesis/.openclaw/workspace-investor/.env` 或脚本内嵌
 - 优势: 返回完整文章内容，专为 AI 分析设计，支持 advanced 深度搜索
 
 ### Serper (Google Search - 补充)
 - 脚本: `/Users/genesis/.openclaw/workspace-investor/serper_search.sh "query" [num]`
-- Key 文件: `serper_keys.json`（4个key，2个有效，2个无额度）
+- Key 文件: `serper_keys.json`
+- **注意:** 部分 key 已无额度，脚本会自动轮换可用 key
 - 直接调用: `curl -X POST https://google.serper.dev/search -H "X-API-KEY: <key>" -d '{"q":"..."}'`
-- **注意:** OpenClaw 内置 `web_search` 不支持 Serper，需通过 exec/curl 调用
 
-## Examples
+## Core Tools
+- **web_fetch** — Read any public URL, extract text
+- **web_search** — Search the web
+- **message** — Send to OTHER channels/people (NOT current conversation; just output text to reply)
+- **exec** — Run shell commands on this Mac mini (macOS 15, Apple Silicon)
 
-```markdown
-### Cameras
+## Environment
+- Mac mini (Apple Silicon), macOS 15, Ottawa, Canada, America/Toronto (ET)
+- Channels: Telegram (invest account)
 
-- living-room → Main area, 180° wide angle
-- front-door → Entrance, motion-triggered
-
-### SSH
-
-- home-server → 192.168.1.100, user: admin
-
-### TTS
-
-- Preferred voice: "Nova" (warm, slightly British)
-- Default speaker: Kitchen HomePod
-```
-
-## Why Separate?
-
-Skills are shared. Your setup is yours. Keeping them apart means you can update skills without losing your notes, and share skills without leaking your infrastructure.
-
----
-
-Add whatever helps you do your job. This is your cheat sheet.
+## Rules
+1. **Search first, ask never.** Always use tools before saying you can't.
+2. **严禁编造数据.** 所有数字必须有来源，无法获取就明确说明。
+3. **Match user's language.** Chinese → Chinese. English → English.
+4. **Be direct.** Do it, don't offer to do it.

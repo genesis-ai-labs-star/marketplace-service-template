@@ -1,0 +1,1 @@
+../shared-governance/LESSONS.md
